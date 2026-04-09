@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "uniwind";
+
+@layer theme {
+  :root {
+    --font-sans: "Inter";
+    --text-base: 16px;
+
+    @variant dark {
+      --color-background: #000000;
+      --color-foreground: #ffffff;
+    }
+
+    @variant light {
+      --color-background: #ffffff;
+      --color-foreground: #000000;
+    }
+
+    @variant ios {
+      --font-sans: "-apple-system", "SF Pro Text";
+      --text-base: 17px;
+      /* iOS prefers slightly larger text */
+    }
+
+    @variant android {
+      --font-sans: "Roboto";
+      --text-base: 14px;
+      /* Material Design standard */
+    }
+
+    @variant web {
+      --font-sans: "Inter", "system-ui", sans-serif;
+      --text-base: 16px;
+    }
+  }
+}
