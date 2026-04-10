@@ -2,6 +2,7 @@ import "../global.css";
 import { NativeTabs } from "expo-router/unstable-native-tabs";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useCSSVariable } from "uniwind";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const queryClient = new QueryClient();
 
@@ -20,7 +21,7 @@ function TabLayout() {
         <NativeTabs.Trigger.Label>Home</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon sf="house" md="home" />
       </NativeTabs.Trigger>
-      <NativeTabs.Trigger name="sermons">
+      <NativeTabs.Trigger name="(stack)">
         <NativeTabs.Trigger.Label>Sermons</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon sf="mic" md="mic" />
       </NativeTabs.Trigger>
@@ -39,7 +40,9 @@ function TabLayout() {
 export default function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
-      <TabLayout />
+      <GestureHandlerRootView>
+        <TabLayout />
+      </GestureHandlerRootView>
     </QueryClientProvider>
   );
 }
