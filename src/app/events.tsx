@@ -60,13 +60,16 @@ export default function Events() {
   const insets = useSafeAreaInsets();
 
   return (
-    <View className="flex-1 bg-background" style={{ paddingTop: insets.top }}>
+    <View
+      className="flex-1 bg-background-dark"
+      style={{ paddingTop: insets.top }}
+    >
       <LegendList
         data={data?.events}
         keyExtractor={(item) => item.uid}
         renderItem={({ item }) => <EventsListItem item={item} />}
         contentContainerStyle={{
-          paddingBottom: insets.bottom,
+          paddingBottom: insets.bottom + 8,
           gap: 8,
           paddingHorizontal: 8,
         }}
