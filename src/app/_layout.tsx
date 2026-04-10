@@ -11,6 +11,7 @@ function TabLayout() {
 
   return (
     <NativeTabs
+      minimizeBehavior="onScrollDown"
       tintColor={iconColor as string}
       iconColor={bgLightColor as string}
       backgroundColor={bgLightColor as string}
@@ -26,6 +27,10 @@ function TabLayout() {
       <NativeTabs.Trigger name="events">
         <NativeTabs.Trigger.Label>Events</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon sf="calendar" md="calendar_clock" />
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="giving">
+        <NativeTabs.Trigger.Label>Giving</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon sf="heart" md="heart_smile" />
       </NativeTabs.Trigger>
     </NativeTabs>
   );

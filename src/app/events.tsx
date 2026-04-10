@@ -71,6 +71,7 @@ export default function Events() {
           paddingHorizontal: 8,
         }}
         showsVerticalScrollIndicator={false}
+        estimatedItemSize={158}
       />
     </View>
   );
