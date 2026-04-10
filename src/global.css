@@ -5,27 +5,56 @@
   :root {
     --font-sans: "Inter";
     --text-base: 16px;
+    --color-primary: "#659d40";
 
     @variant dark {
-      --color-background: #000000;
-      --color-foreground: #ffffff;
+      /* Backgrounds */
+      --color-background-dark: hsl(0 0% 0%);
+      --color-background: hsl(0 0% 5%);
+      --color-background-light: hsl(0 0% 10%);
+
+      /* Text */
+      --color-foreground: hsl(0 0 95%);
+      --color-foreground-inverted: hsl(0 0% 5%);
+      --color-foreground-muted: hsl(0 0% 70%);
+      --color-foreground-muted-inverted: hsl(0 0% 30%);
+
+      /* Borders */
+      --color-border: hsl(0 0% 30%);
     }
 
     @variant light {
-      --color-background: #ffffff;
-      --color-foreground: #000000;
+      /* Backgrounds */
+      --color-background-dark: hsl(0 0% 90%);
+      --color-background: hsl(0 0% 95%);
+      --color-background-light: hsl(0 0% 100%);
+
+      /* Text */
+      --color-foreground: hsl(0 0% 5%);
+      --color-foreground-inverted: hsl(0 0 95%);
+      --color-foreground-muted: hsl(0 0% 30%);
+      --color-foreground-muted-inverted: hsl(0 0% 70%);
+
+      /* Borders */
+      --color-border: hsl(0 0% 30%);
     }
 
     @variant ios {
       --font-sans: "-apple-system", "SF Pro Text";
       --text-base: 17px;
       /* iOS prefers slightly larger text */
+      /* iOS prefers more generous spacing */
+      --spacing-4: 20px;
+      --spacing-6: 28px;
     }
 
     @variant android {
       --font-sans: "Roboto";
       --text-base: 14px;
       /* Material Design standard */
+      /* Material Design spacing */
+      --spacing-4: 16px;
+      --spacing-6: 24px;
     }
 
     @variant web {
